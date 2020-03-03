@@ -13,20 +13,21 @@
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
+      <h1>Home</h1>
       <?php
-      if (have_posts()) :
-        /* Start the Loop */
-        while (have_posts()) : the_post();
+      // if (have_posts()) :
+      //   /* Start the Loop */
+      //   while (have_posts()) : the_post();
       ?>
         <div>
-          <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+          <!-- <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a> -->
         </div>
       <?php
-        endwhile;
-        /* End the Loop */
-      else :
-        // Nothing
-      endif;
+      //   endwhile;
+      //   /* End the Loop */
+      // else :
+      //   // Nothing
+      // endif;
       ?>
 
     </main><!-- #main -->
