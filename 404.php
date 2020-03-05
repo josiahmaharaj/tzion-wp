@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
+<?php get_header(); ?>
 
 <div class="wrap">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-     <h1>Page not found.</h1>
+      <div class="container">
+      <h1>Sorry...</h1>
+      <p>There's no content here.</p>
+      </div>
 
     </main><!-- #main -->
   </div><!-- #primary -->
 </div><!-- .wrap -->
 
 <?php get_footer(); ?>
-<?php wp_footer(); ?>
-
-</body>
-</html>

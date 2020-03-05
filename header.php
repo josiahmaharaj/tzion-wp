@@ -29,14 +29,17 @@
 <body <?php body_class(); ?>>
     <div class="navbar navbar-expand-md px-4 py-2 d-flex justify-content-between">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" class="img-fluid" alt="Responsive image" style="width:100px;height:auto">
-        
+        <div>
+        <a href="#"><strong>Volunteer</strong></a>
+        <span> | </span>
+        <a href="#"><strong>Donate</strong></a>
+        </div>
            
     </div>
-    <nav class="navbar navbar-expand-md navbar-light bg-light ">
-        <!-- <a class="navbar-brand" href="#">Carousel</a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+     <!-- <nav class="navbar navbar-expand-md navbar-light bg-light ">
+        <a class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+             <strong>MENU</strong>
+        </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav nav-fill">
                 <li class="nav-item active">
@@ -54,10 +57,30 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
                 </li>
-            </ul>
+            </ul>  -->
             <!-- <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
-        </div>
-    </nav>
+      </form>  -->
+       <!-- </div>
+    </nav> -->
+
+     <nav class="navbar navbar-expand-md navbar-light bg-light ">
+	<a class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+             <strong>MENU</strong>
+        </a> 
+
+	<div class="collapse navbar-collapse" id="navbarCollapse navbar-content">
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'mainmenu',
+			'menu_id'        => 'primary-menu',
+			'container'      => false,
+			'depth'          => 2,
+			'menu_class'     => 'navbar-nav nav-fill',
+			'walker'         => new Bootstrap_NavWalker(),
+			'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+		) );
+		?>
+	</div>
+</nav> 

@@ -8,7 +8,7 @@
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
           <div class="carousel-caption text-right">
@@ -41,7 +41,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -52,7 +52,25 @@
     </a>
   </div>
 
-
+  <div class="container">
+      <?php
+      if (have_posts()) :
+        /* Start the Loop */
+        while (have_posts()) : the_post();
+      ?>
+      
+        <div>
+          <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+        </div>
+        
+      <?php
+        endwhile;
+        /* End the Loop */
+      else :
+        // Nothing
+      endif;
+      ?>
+</div>
 
     </main><!-- #main -->
   </div><!-- #primary -->
