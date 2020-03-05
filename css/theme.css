@@ -1,3 +1,19 @@
+html {
+    margin: 0 !important;
+}
+
+.home.blog {
+    padding-top: 0rem;
+}
+
+.nav-link {
+    font-weight: 700;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
