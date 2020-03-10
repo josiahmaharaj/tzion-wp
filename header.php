@@ -20,23 +20,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="navbar navbar-expand-md px-4 py-2 d-flex justify-content-between">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" class="img-fluid" alt="Responsive image" style="width:100px;height:auto">
-        <div>
-        <a href="#"><strong>Volunteer</strong></a>
-        <span> | </span>
-        <a href="#"><strong>Donate</strong></a>
+    <div class="container">
+        <div class=" row navbar navbar-expand-md px-4 py-2 d-flex justify-content-between">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" class="img-fluid"
+                alt="Responsive image" style="width:100px;height:auto">
+            <div>
+                <a href="#"><strong>Volunteer</strong></a>
+                <span> | </span>
+                <a href="#"><strong>Donate</strong></a>
+            </div>
         </div>
-           
     </div>
-     <!-- <nav class="navbar navbar-expand-md navbar-light bg-light ">
+    <!--<nav class="navbar navbar-expand-md navbar-light bg-light ">
         <a class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
              <strong>MENU</strong>
         </a>
@@ -58,20 +61,21 @@
                     <a class="nav-link" href="#">Contact Us</a>
                 </li>
             </ul>  -->
-            <!-- <form class="form-inline mt-2 mt-md-0">
+    <!-- <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>  -->
-       <!-- </div>
+    <!-- </div>
     </nav> -->
 
-     <nav class="navbar navbar-expand-md navbar-light bg-light ">
-	<a class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-             <strong>MENU</strong>
-        </a> 
+    <nav class="navbar navbar-expand-md navbar-light bg-light ">
+        <a class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <strong>MENU</strong>
+        </a>
 
-	<div class="collapse navbar-collapse" id="navbarCollapse navbar-content">
-		<?php
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <?php
 		wp_nav_menu( array(
 			'theme_location' => 'mainmenu',
 			'menu_id'        => 'primary-menu',
@@ -82,5 +86,5 @@
 			'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
 		) );
 		?>
-	</div>
-</nav> 
+        </div>
+    </nav>

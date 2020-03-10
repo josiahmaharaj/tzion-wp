@@ -23,8 +23,55 @@ body {
     user-select: none;
 }
 
+.headerimg {
+    margin-bottom: 4rem;
+}
+
+
+/* Since positioning the image, we need to help out the caption */
+
+.headerimg-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+
+/* Declare heights because of positioning of img element */
+
+.headerimg-item {
+    height: 15rem;
+    background-image: linear-gradient(to top, #000, transparent);
+}
+
+.headerimg-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    z-index: -1;
+}
+
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
     }
+}
+
+blockquote {
+    margin: 0 0 1rem;
+    border-left: 5px solid black;
+    padding-left: 2em;
+}
+
+
+/* ol>li {
+    padding-top: 1em;
+    padding-bottom: 1em;
+} */
+
+.strategy>li {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }

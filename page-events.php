@@ -11,7 +11,7 @@
                             class="d-block w-100" alt="headerimage">
                         <div class="container">
                             <div class="carousel-caption text-center">
-                                <h1><?php the_title(); ?></h1>
+                                <h1>Events</h1>
 
                             </div>
                         </div>

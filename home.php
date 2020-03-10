@@ -1,41 +1,45 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
+<?php get_header(); ?>
 
 <div class="wrap">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <div class="headerimg slide">
+                <div class="carousel-inner">
+                    <div class="headerimg-item active">
+                        <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg> -->
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/texture.jpg' ; ?>"
+                            class="d-block w-100" alt="headerimage">
+                        <div class="container">
+                            <div class="carousel-caption text-center">
+                                <h1>News</h1>
 
-      <h1>Home</h1>
-      <?php
-      // if (have_posts()) :
-      //   /* Start the Loop */
-      //   while (have_posts()) : the_post();
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-4"></div>
+            <div class="container">
+            <?php
+      if (have_posts()) :
+        /* Start the Loop */
+        while (have_posts()) : the_post();
       ?>
-        <div>
-          <!-- <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a> -->
-        </div>
-      <?php
-      //   endwhile;
-      //   /* End the Loop */
-      // else :
-      //   // Nothing
-      // endif;
+ 
+                <a href="<?php the_permalink(); ?>">
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php the_category(); ?></p>
+                </a>
+                <?php
+        endwhile;
+        /* End the Loop */
+      else :
+        // Nothing
+      endif;
       ?>
-
-    </main><!-- #main -->
-  </div><!-- #primary -->
+            </div>
+        </main><!-- #main -->
+    </div><!-- #primary -->
 </div><!-- .wrap -->
 
 <?php get_footer(); ?>
-<?php wp_footer(); ?>
-
-</body>
-</html>
